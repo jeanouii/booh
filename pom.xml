@@ -88,4 +88,11 @@
       </plugin>
     </plugins>
   </build>
+
+  <scm>
+    <url>scm:git:git@github.com:tomitribe/booh.git</url>
+    <developerConnection>scm:git:git@github.com:tomitribe/booh.git</developerConnection>
+    <connection>scm:git:git@github.com:tomitribe/booh.git</connection>
+    <tag>HEAD</tag>
+  </scm>
 </project>
