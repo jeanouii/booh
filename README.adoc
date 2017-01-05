@@ -1,0 +1,22 @@
+= Booh
+
+A simple link:http://www.gebish.org/[Geb] wrapper setting up link:http://phantomjs.org/[PhantomJS].
+
+[source,groovy]
+----
+@Grab('org.tomitribe:booh:1.0')
+import org.tomitribe.booh.Booh
+
+Booh.drive {
+    reportGroup 'Tomitribe Website'
+
+    go 'http://www.tomitribe.org'
+    report 'Tomitribe Homepage'
+
+    assert title == 'Tomitribe'
+    report 'Title is OK'
+
+    assert $('#menu-primary-navigation').find('li', 1).find('a').text() == 'SUPPORT'
+    report 'Support link is OK'
+}
+----
